@@ -1,3 +1,3 @@
 # CMU-Dietrich-Partnerships
 
-Landing page for Carnegie Mellon University's Dietrich College of Humanities and Social Sciences established to provide resources on how to connect and form partnerships. 
+Mockup of a potential landing page for [Carnegie Mellon University](https://www.cmu.edu/)'s [Dietrich College of Humanities and Social Sciences](https://www.cmu.edu/dietrich/), established to provide resources on how groups outside of Carnegie Mellon can connect and form partnerships with students and faculty. 
