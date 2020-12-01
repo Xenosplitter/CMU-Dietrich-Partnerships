@@ -40,6 +40,10 @@
         1.2. General styles
     ------------------------------------------------------ */
 
+        .my-container {
+            padding: 0 15%;
+        }
+
     /* ------------------------------------------------------
         1.3. Color scheme
     ------------------------------------------------------ */
@@ -49,7 +53,7 @@
         ------------------------------------------------------ */
 
         :root {
-            --cmu-red: #bb000;
+            --cmu-red: #bb0000;
         }
 
         /* ------------------------------------------------------
@@ -140,8 +144,30 @@
         2.1 Structure, logo
     ------------------------------------------------------ */
 
-        header {
-            background-color: --var(--cmu-red);
+        .roof {
+            padding: 2em 9%;
+            min-height: 39px;
+            background-color: var(--cmu-red);
+
+            font-size: 90%;
+            line-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .roof {
+                padding: 0 15%;
+            }
+        }
+
+        .my-brand {
+            margin: 40px 0;
+        }
+
+        .wordmark {
+            min-width: 300px;
+            max-height: 31px;
         }
 
     /* ------------------------------------------------------
