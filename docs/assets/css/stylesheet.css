@@ -61,7 +61,6 @@
             border-bottom-color: red;
         }
 
-        
         .navbar a, nav a {
             border: none !important;
         }
@@ -337,6 +336,27 @@
 
     #legal > p:last-child {
         color: rgba(255,255,255,0.5);
+    }
+
+    /* Socials */
+    #facebook {
+
+    }
+
+    #twitter {
+
+    }
+
+    #youtube {
+
+    }
+
+    #rss {
+
+    }
+
+    #instagram {
+        
     }
 
 /* ------------------------------------------------------
