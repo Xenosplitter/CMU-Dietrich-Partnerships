@@ -32,7 +32,8 @@
         1.2. General styles
     ------------------------------------------------------ */
 
-        .body {
+        body {
+            height: 100%;
             font-size: 1em;
             font-weight: 400;
             line-height: 1.35em;
@@ -346,24 +347,58 @@
     }
 
     /* Socials */
-    #facebook {
+    /* All socials use the same spritesheet. Select a different image by translating the background image on the x axis */
 
+    #my-socials {
+        margin: 0;
+        padding: 0;
+    }
+
+    #my-socials li {
+        display: inline;
+    }
+
+    #my-socials li:first-child {
+        padding-top: 7.2px;
+    }
+
+    #my-socials a {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        margin: 0 6px 6px 0;
+        padding-bottom: 0 !important;
+        text-indent: -9999px;
+    }
+
+    #facebook {
+        background: 0 0 no-repeat url(../img/sprites-social.png);
+        background-size: auto 100%;
+        border-bottom: 0 none !important;
     }
 
     #twitter {
-
+        background: -32px 0 no-repeat url(../img/sprites-social.png);
+        background-size: auto 100%;
+        border-bottom: 0 none !important;
     }
 
     #youtube {
-
+        background: -130px 0 no-repeat url(../img/sprites-social.png);
+        background-size: auto 100%;
+        border-bottom: 0 none !important;
     }
 
     #rss {
-
+        background: -194px 0 no-repeat url(../img/sprites-social.png);
+        background-size: auto 100%;
+        border-bottom: 0 none !important;
     }
 
     #instagram {
-        
+        background: -258px 0 no-repeat url(../img/sprites-social.png);
+        background-size: auto 100%;
+        border-bottom: 0 none !important;
     }
 
 /* ------------------------------------------------------
