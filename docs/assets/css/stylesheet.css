@@ -40,10 +40,6 @@
             word-wrap: break-word;
         }
 
-        .my-container {
-            padding: 0 15%;
-        }
-
         /* Various Links */
         a {
             color: var(--cmu-red);
@@ -119,6 +115,17 @@
             html, button, input, select, textarea { 
             font-family: 'Open Sans', 'Helvetica', sans-serif 
             }
+        }
+
+        input, textarea {
+            background: #fff;
+            border: 1px solid rgba(0,0,0,.35);
+            font-size: 1em;
+            margin: .25em 0;
+            padding: .35em .5em;
+            position: relative;
+            display: inline-block;
+            max-width: calc(100% - 6px - .5em);
         }
 
     /* ------------------------------------------------------
@@ -210,7 +217,7 @@
             text-indent: -9999px;
             background: url(../wordmark/cmu-wordmark-horizontal-w.png) no-repeat left center scroll transparent;
             background-size: auto;
-            background-size: contain;
+            background-size: contain
         }
 
         .menu-btn {
@@ -218,7 +225,7 @@
             position: absolute;
             float: right;
             top: 0;
-            right: 15%;
+            right: 9%;
             color: #fff;
             margin-top: 5px;
             font-size: 2.5em;
@@ -229,7 +236,112 @@
         .menu-btn:hover, .menu-btn:visited {
             color: #fff;
         }
-        
+
+        /* Search */
+        /* Stlyes pulled from https://www.cmu.edu/dietrich/ */
+        .roof form {
+            position: absolute;
+            top: 0;
+            right: calc(9% + 42px);
+            display: flex;
+            flex-flow: nowrap row;
+            align-items: stretch;
+            align-content: stretch;
+            justify-content: flex-start;
+            height: 100%;
+            line-height: 1.65em;
+            width: 25%;
+            max-width: 300px;
+        }
+
+        @media only screen and (max-width: 1300px) {
+            .roof form {
+                right: calc(2% + 42px);
+            }
+
+            .menu-btn {
+                right: 2%
+            }
+        }
+
+        @media only screen and (min-width: 1700px) {
+            .roof form {
+                right: calc(15% + 42px);
+            }
+
+            .menu-btn {
+                right: 15%
+            }
+        }
+
+        .search label {
+            height: 100%;
+            width: 100%;
+        }
+
+        .search label:not(.searchSite) span {
+            display: none;
+        }
+
+        input:not([type="radio"]), select, textarea {
+            border-radius: 0;
+        }
+
+        .roof input[placeholder="Search"] {
+            background-color: rgba(0,0,0,.2);
+            border: 0 none;
+            color: #fff;
+            height: 100%;
+            margin: 0;
+            padding: 0 30px 0 8px;
+            width: calc(100% - 38px);
+        }
+
+        .roof label.searchSite {
+            display: none;
+            position: absolute;
+            letter-spacing: .025em;
+            left: -105%;
+            text-align: right;
+            top: 30%;
+        }
+
+        .roof.invert .search button {
+            height: 100%;
+            margin: 0;
+        }
+
+        .search label.searchSite span {
+            font-size: 90%;
+            margin: 1px 0 0 .5em;
+            float: right;
+        }
+
+        /* Hide checkbox until searchbox is clicked within */
+        .search label.searchSite, .search label:not(.searchSite) span {
+            display: none;
+        }
+
+        .roof input[type="checkbox"] {
+            margin: 0;
+            vertical-align: baseline;
+        }
+
+        .search button {
+            background: url(../img/icon-magnify.png) scroll no-repeat 50% 50%;
+            background-color: rgba(0,0,0,.2);
+            background-size: auto;
+            background-size: 50%;
+            height: 100%;
+            padding: 0 14px 0 24px;
+            text-indent: -9999px;
+            width: auto;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: 0 none;
+        }
 
     /* ------------------------------------------------------
         2.2 Header text
