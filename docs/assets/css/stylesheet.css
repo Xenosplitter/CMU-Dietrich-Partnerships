@@ -160,7 +160,7 @@
     ------------------------------------------------------ */
 
         /* Basically, any non-touch device has this transition */
-        body:not(.touch) a, body:not(.touch) b, body:not(.touch) button, body:not(.touch) div, body:not(.touch) em, body:not(.touch) h1, body:not(.touch) header, body:not(.touch) i, body:not(.touch) img, body:not(.touch) input, body:not(.touch) nav, body:not(.touch) p, body:not(.touch) span, body:not(.touch) strong {
+        body:not(.touch) a, body:not(.touch) b, body:not(.touch) button, body:not(.touch) div, body:not(.touch) em, body:not(.touch) form, body:not(.touch) h1, body:not(.touch) header, body:not(.touch) i, body:not(.touch) img, body:not(.touch) input, body:not(.touch) label, body:not(.touch) main, body:not(.touch) nav, body:not(.touch) p, body:not(.touch) span, body:not(.touch) strong {
             transition: background-color .3s ease,border-color .3s ease,box-shadow .3s ease,color .3s ease,margin .3s ease,min-height .3s ease,max-width .3s ease,opacity .3s ease,padding-left .3s ease,padding-right .3s ease,left .3s ease,right .3s ease,text-shadow .3s ease,width .3s ease;
         }
 
