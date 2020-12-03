@@ -183,10 +183,19 @@
             margin-bottom: 1em;
         }
 
+        .my-brand {
+            max-height: 39px;
+        }
+
         /* Phone Screens */
         @media only screen and (max-width: 767px) {
             .roof {
                 position: relative;
+            }
+
+            .my-brand {
+                max-height: unset;
+                width: 85%;
             }
         }
 
@@ -204,10 +213,6 @@
             }
         }
 
-        .my-brand {
-            max-height: 39px;
-        }
-
         .wordmark {
             display: inline-block;
             min-height: 2.15em;
@@ -218,6 +223,13 @@
             background: url(../wordmark/cmu-wordmark-horizontal-w.png) no-repeat left center scroll transparent;
             background-size: auto;
             background-size: contain
+        }
+
+        .roof a.wordmark, .roof.invert .wordmark {
+            max-height: unset;
+            width: 85%;
+            margin: 10px 0 6px;
+            min-width: 300px;
         }
 
         .menu-btn {
@@ -252,26 +264,6 @@
             line-height: 1.65em;
             width: 25%;
             max-width: 300px;
-        }
-
-        @media only screen and (max-width: 1300px) {
-            .roof form {
-                right: calc(2% + 42px);
-            }
-
-            .menu-btn {
-                right: 2%
-            }
-        }
-
-        @media only screen and (min-width: 1700px) {
-            .roof form {
-                right: calc(15% + 42px);
-            }
-
-            .menu-btn {
-                right: 15%
-            }
         }
 
         .search label {
@@ -341,6 +333,60 @@
             right: 0;
             top: 0;
             border: 0 none;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .roof .menu-btn + form {
+                right: 0;
+            }
+
+            .roof form {
+                position: relative;
+                right: auto;
+                display: block;
+                padding-top: 0;
+                top: auto;
+                width: 100%;
+                padding: 0;
+                max-width: none;
+            }
+
+            .search button {
+                display: none;
+            }
+
+            .roof input[placeholder="Search"] {
+                padding-bottom: .35em;
+                padding-top: .35em;
+                padding-right: 8px;
+                width: 100%;
+                max-width: unset;
+                background-image: url(../img/icon-magnify.png);
+                background-repeat: no-repeat;
+                background-position: 98% center;
+                background-size: auto 80%;
+                font-size: 16px;
+            }
+        }
+
+        @media only screen and (max-width: 1300px) {
+            .roof form {
+                right: calc(2% + 42px);
+            }
+
+            .menu-btn {
+                right: 2%
+            }
+        }
+
+        @media only screen and (min-width: 1700px) {
+            .roof form {
+                right: calc(15% + 42px);
+            }
+
+            .menu-btn {
+                right: 15%
+            }
         }
 
     /* ------------------------------------------------------
