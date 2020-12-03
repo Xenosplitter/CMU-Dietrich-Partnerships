@@ -111,6 +111,10 @@
         html, button, input, select, textarea {
             font-family: 'Roboto', 'Helvetica', sans-serif
             }
+        
+        html, body {
+            overflow-x: hidden;
+        }
 
         /* To speed up load time, only use Open Sans for screens larger than tablet. */
         @media only screen and (min-width: 767px) {
@@ -137,29 +141,6 @@
     /* ------------------------------------------------------
         1.5. Custom Class
     ------------------------------------------------------ */
-
-        /* Handle resizing on default to -300px less */
-        .menu-on {
-            width: calc(100% - 300px);
-            z-index: 101;
-        }
-
-        /* Handle side nav on small screens to cover, not resize*/
-        @media only screen and (max-width: 960px) {
-            .menu-on {
-                width: 100vw;
-                position: fixed;
-            }
-        }
-        
-        /* Handle resizing on large screens to -450px less */
-        @media only screen and (min-width: 1700px) {
-            .menu-on {
-                width: calc(100% - 450px);
-                z-index: 101;
-            }
-        }
-    
 
     /* ------------------------------------------------------
         1.6. Transitions
@@ -466,6 +447,10 @@
     3. Main
 ------------------------------------------------------ */
 
+    .container {
+        max-width: unset;
+    }
+
     .core {
         padding: 0 9%;
     }
@@ -625,3 +610,52 @@
 /* ------------------------------------------------------
     5. Sidenav
 ------------------------------------------------------ */
+
+    #non-sidenav {
+        display: inline-block;
+        width: 100%;
+
+    }
+
+    #sidenav {
+        display: none;
+
+        width: 300px;
+        height: 100%;
+        background: #333;
+    }
+
+    #sidenav menu-on {
+        display: inline-block;
+        position: fixed;
+    }
+
+
+
+
+
+    /* Handle resizing on default to -300px less */
+    #non-sidenav menu-on {
+        width: calc(100% - 300px);
+        z-index: 101;
+    }
+
+    /* Handle side nav on small screens to cover, not resize*/
+    @media only screen and (max-width: 960px) {
+        #non-sidenav menu-on {
+            width: 100vw;
+            position: fixed;
+        }
+    }
+
+    /* Handle resizing on large screens to -450px less */
+    @media only screen and (min-width: 1700px) {
+        #non-sidenav menu-on {
+            width: calc(100% - 450px);
+            z-index: 101;
+        }
+
+        #sidenav {
+            width: 450px;
+        }
+    }
