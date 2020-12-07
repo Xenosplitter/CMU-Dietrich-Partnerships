@@ -6,8 +6,6 @@
 function openSidenav() {
     sideNav.classList.add("menu-on");
     content.classList.add("menu-on");
-
-    sideNav.style["display"] = "inline";
 }
 
 // Hide sidenav
