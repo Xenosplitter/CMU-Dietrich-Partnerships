@@ -7,6 +7,9 @@ function openSidenav() {
     sideNav.classList.add("menu-on");
     content.classList.add("menu-on");
     footer.classList.add("menu-on");
+
+    // Hide button until sidenav closed
+    menuBtn.style["visibility"] = "hidden";
 }
 
 // Hide sidenav
@@ -14,6 +17,9 @@ function closeSidenav() {
     sideNav.classList.remove("menu-on");
     content.classList.remove("menu-on");
     footer.classList.remove("menu-on");
+
+    // Show sidenav button
+    menuBtn.style["visibility"] = "visible";
 }
 
 menuBtn  = document.getElementById("sidenav-toggle");    // Find the button
