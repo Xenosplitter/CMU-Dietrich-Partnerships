@@ -19,6 +19,7 @@
     3. Main
     4. Footer
     5. Sidenav
+        5.1. Links
 
 ------------------------------------------------------ */
 
@@ -653,7 +654,7 @@
         transition: right .2s ease;
     }
 
-    #sidenav.menu-on {
+    .menu-on#sidenav {
         display: block;
         position: fixed;
         border-left: 1px solid rgba(0,0,0,.35);
@@ -662,15 +663,15 @@
     }    
 
     /* Handle resizing on default to -300px less */
-    #non-sidenav.menu-on {
+    .menu-on#non-sidenav {
         width: calc(100% - 300px);
     }
 
-    #sidenav.menu-btn {
+    .menu-btn#close-nav {
         right: 0;
     }
 
-    #close-nav.search button {
+    .search#nav-search button {
         background: url(../img/icon-magnify.png) scroll no-repeat 50% 50%;
         background-color: rgba(0,0,0,.2);
         background-size: auto;
@@ -686,6 +687,15 @@
         border: 0 none;
     }
 
+    #sidenav h1 {
+        padding-left: 1em;
+        font-size: 1.5em;
+    }
+
+    #sidenav h1 a {
+        color: rgba(255,255,255,.85);
+    }
+
     /* Handle side nav on small screens to cover, not resize*/
     @media only screen and (max-width: 767px) {
         nav#sidenav {
@@ -695,22 +705,21 @@
     }
 
     @media only screen and (max-width: 991px) {
-        #non-sidenav.menu-on {
+        .menu-on#non-sidenav {
             width: 100vw;
             position: fixed;
         }
-
-        #sidenav {
-            padding-top: 3.5em;
-        }
     }
 
-    @media only screen and (max-width: 1300px) {
+    @media only screen and (min-width: 992px) {
+        #sidenav h1 {
+            padding-top: 2em;
+        }
     }
 
     /* Handle resizing on large screens to -450px less */
     @media only screen and (min-width: 1700px) {
-        #non-sidenav.menu-on {
+        .menu-on#non-sidenav {
             width: calc(100% - 450px) !important;
             z-index: 102;
         }
@@ -719,4 +728,76 @@
             width: 450px !important;
         }
     }
+
+    /* ------------------------------------------------------
+        5.1. Links
+    ------------------------------------------------------ */
     
+        .menu-list a, .menu-list a:visited {
+            color: rgba(255,255,255,.85);
+        }
+
+        .menu-list li {
+            padding-top: 0.25em;
+        }
+        
+        .menu-list li:not(.secondary) {
+            border-bottom: 0.5px solid rgba(255,255,255,.15);
+        }
+
+        .menu-list li:not(.secondary):first-child {
+            border-top: 0.5px solid rgba(255,255,255,.15);
+        }
+
+        .menu-list li.secondary a {
+            font-weight: 300;
+        }
+
+        .menu-list > ul > li:not(.secondary) > a {
+            letter-spacing: .05em;
+        }
+
+        .menu-list ul ul li {
+            text-indent: 2em;
+        }
+
+        ul.sub-menu {
+            border-bottom: 0.5px solid rgba(255,255,255,.15)
+        }
+
+        li[aria-expanded="true"] {
+            border: 0 none white !important;
+        }
+
+        .menu-list a {
+            padding: .25em 2em;
+            line-height: 1.5em;
+            padding-right: 70px;
+            font-weight: 700;
+        }
+
+        #sidenav li:hover {
+            background-color: rgba(255,255,255,.25);
+            transition: background-color .3s ease,border-color .3s ease,box-shadow .3s ease,color .3s ease,margin .3s ease,min-height .3s ease,max-width .3s ease,opacity .3s ease,padding-left .3s ease,padding-right .3s ease,left .3s ease,right .3s ease,text-shadow .3s ease,width .3s ease;
+        }
+
+        #sidenav h1 a:hover {
+            color: #fff !important;
+            text-shadow: 0 0 5px rgba(0,0,0,.5);
+        }
+
+        @media only screen and (min-width: 992px) {
+            #sidenav h1 {
+                padding-top: 2em;
+            }
+
+            .menu-list a {
+                padding-right: 30px;
+            }
+        }
+
+        @media only screen and (min-width: 1700px) {
+            .menu-list a {
+                padding-right: 70px;
+            }
+        }
