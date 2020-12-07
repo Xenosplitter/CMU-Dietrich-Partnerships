@@ -16,9 +16,11 @@ function closeSidenav() {
     footer.classList.remove("menu-on");
 }
 
-menuBtn = document.getElementById("sidenav-toggle");    // Find the button
-sideNav = document.getElementById("sidenav");           // Find the sidenav
-content = document.getElementById("non-sidenav");       // Find non sidenav content
-footer  = document.getElementsByTagName("footer")[0]  // Find footer
+menuBtn  = document.getElementById("sidenav-toggle");    // Find the button
+closeBtn = document.getElementById("close-nav");         // Find the close button
+sideNav  = document.getElementById("sidenav");           // Find the sidenav
+content  = document.getElementById("non-sidenav");       // Find non sidenav content
+footer   = document.getElementsByTagName("footer")[0]    // Find footer
 
-menuBtn.onclick = function() {openSidenav()};
+menuBtn.onclick  = function() {openSidenav()};
+closeBtn.onclick = function() {closeSidenav()};

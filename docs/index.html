@@ -30,7 +30,7 @@
                     </div>
 
                     <!-- Sidenav toggle button -->
-                    <a class="menu-btn" id="sidenav-toggle" aria-hidden="true" href="#">
+                    <a class="menu-btn" id="sidenav-toggle" aria-hidden="true" href="#search">
                         <b>—</b>
                         <b>—</b>
                         <b>—</b>
@@ -163,7 +163,32 @@
  
         <!-- When nav button is toggled, add menu-on to class to show sidenav, otherwise keep hidden -->
         <nav class="" id="sidenav">
-            <p>placeholder</p>
+            <a aria-haspopup="true" class="menu-btn" id="close-nav" aria-hidden="true" href="#main">✕</a>
+
+             <!-- Search -->
+             <form class="search" id="nav-search" action="https://web-search.andrew.cmu.edu/search">
+                <!-- Pulled from https://www.cmu.edu/dietrich/ search html -->
+                <!-- As this was pulled without context or comments, I can only guess that this is for internal search
+                     parameters. If this would change wrt a user's browser, this implementation would not work as intended. -->
+                <input name="entqr" type="hidden" value="3">
+                <input name="entsp" type="hidden" value="a">
+                <input name="sort" type="hidden" value="date:D:L:d1">
+                <input name="output" type="hidden" value="xml_no_dtd">
+                <input name="client" type="hidden" value="default_frontend">
+                <input name="ud" type="hidden" value="1">
+                <input name="oe" type="hidden" value="UTF-8">
+                <input name="ie" type="hidden" value="UTF-8">
+                <input name="proxystylesheet" type="hidden" value="default_frontend">
+                <label>
+                    <span>Search</span>
+                    <input name="q" placeholder="Search" title="Type keywords into this box, then press enter.">
+                </label>
+                <button title="Submit" type="submit">Search</button>
+                <label class="searchSite">
+                    <span>Search this site only</span>
+                    <input checked="false" name="site" type="checkbox" value="dietrich-2">
+                </label>
+            </form>
         </nav> <!-- End sidenav -->
 
         <!-- jQuery, Popper.js, and Bootstrap JS -->
