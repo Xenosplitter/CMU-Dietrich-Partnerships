@@ -136,6 +136,19 @@
             max-width: calc(100% - 6px - .5em);
         }
 
+        .h1, .h2, h1, h2, h3, h4, h5, h6 {
+            color: #767676;
+            font-size: 1em;
+            font-weight: 700;
+            line-height: 1.35em;
+            word-wrap: normal;
+        }
+
+        .h1, h1 {
+            font-size: 2.35em;
+            font-weight: 300;
+        }
+
     /* ------------------------------------------------------
         1.4. Custom Class
     ------------------------------------------------------ */
@@ -168,8 +181,6 @@
 
                 font-size: 90%;
                 line-height: 0;
-
-                margin-bottom: 1em;
             }
 
             .my-brand {
@@ -179,6 +190,10 @@
             .breadcrumbs, .content, .grid, .hero .caption, .hero > .text, .roof, header nav, header > div {
                 padding: 0 9%;
                 width: auto;
+            }
+
+            #container > header a, #container > header a:focus, #container > header a:hover, .roof a, .roof a:focus, .roof a:hover, .roof.invert a {
+                border-bottom-color: transparent;
             }
 
             /* Phone Screens */
@@ -400,6 +415,16 @@
                 padding-top: 0;
                 padding-bottom: 0;
             }
+            
+            #sitename {
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+
+            #sitename h1 {
+                font-size: 3em;
+                line-height: 1.15em;
+            }
 
             @media only screen and (max-width: 767px) {
                 #sitename h1 {
@@ -424,11 +449,7 @@
                     font-size: 2.5em;
                 }
             }
-
-            @media only screen and (max-width: 1300px) {
-                
-            }
-
+            
     /* ------------------------------------------------------
         2.2 Header text
     ------------------------------------------------------ */
