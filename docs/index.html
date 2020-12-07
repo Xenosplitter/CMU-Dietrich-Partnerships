@@ -93,80 +93,48 @@
 
             </header>
 
-            <div id="image-carousel">
-                <!-- indicators
-                <ol class="carousel-indicators">
-                    <li data-target="#image-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#image-carousel" data-slide-to="1"></li>
-                    <li data-target="#image-carousel" data-slide-to="2"></li>
-                    <li data-target="#image-carousel" data-slide-to="3"></li>
-                    <li data-target="#image-carousel" data-slide-to="4"></li>
-                </ol>-->
-
-                <!-- carousel content -->
-                <div class="carousel-inner">
-                    <!-- first slide-->
-                    <div id="first-slide" class="carousel-item">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Title</h5>
-                            <p>Filler Text</p>
-                        </div>
-                    </div>
-
-                    <!-- second slide-->
-                    <div id="second-slide" class="carousel-item">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Title</h5>
-                            <p>Filler Text</p>
-                        </div>
-                    </div>
-
-                    <!-- third slide-->
-                    <div id="third-slide" class="carousel-item">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Title</h5>
-                            <p>Filler Text</p>
-                        </div>
-                    </div>
-
-                    <!-- fourth slide-->
-                    <div id="fourth-slide" class="carousel-item">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Title</h5>
-                            <p>Filler Text</p>
-                        </div>
-                    </div>
-
-                    <!-- fifth slide-->
-                    <div id="fifth-slide" class="carousel-item">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Title</h5>
-                            <p>Filler Text</p>
-                        </div>
-                    </div>
-
+            <!-- Bootstrap carousel was not giving me the desired results, so I used a slider-->
+            <!-- Code for carousel from https://www.cssscript.com/css-flexbox-image-carousel/-->
+            <div id="image-carousel"> 
+                <!-- indicators -->
+                <input id="slider1" type="radio" name="slider" class="slide-radio1" checked="">
+                <input id="slider2" type="radio" name="slider" class="slide-radio2">
+                <input id="slider3" type="radio" name="slider" class="slide-radio3">
+                <input id="slider4" type="radio" name="slider" class="slide-radio4">
+                <input id="slider5" type="radio" name="slider" class="slide-radio5">
+                
+                <!-- Carousel navigation controls -->
+                <div class="slider-pagination">
+                    <label class="page1" for="slider1"></label>
+                    <label class="page2" for="slider2"></label>
+                    <label class="page3" for="slider3"></label>
+                    <label class="page4" for="slider4"></label>
+                    <label class="page5" for="slider5"></label>
                 </div>
 
-                <!-- Carousel navigation controls
-                <a class="carousel-control-prev" href="#image-carousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous Image</span>
-                </a>
-                <a class="carousel-control-next" href="#image-carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next Image</span>
-                </a>-->
+                <div class="next control">
+                    <label class="num1" for="slider1"></label>
+                    <label class="num2" for="slider2"></label>
+                    <label class="num3" for="slider3"></label>
+                    <label class="num4" for="slider4"></label>
+                    <label class="num5" for="slider5"></label>
+                </div>
 
-                <!-- indev nav controls -->
-                <button id="carousel-control-left">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous Image</span>
-                </button>
+                <div class="previous control">
+                    <label class="num1" for="slider1"></label>
+                    <label class="num2" for="slider2"></label>
+                    <label class="num3" for="slider3"></label>
+                    <label class="num4" for="slider4"></label>
+                    <label class="num5" for="slider5"></label>
+                </div>
+                <!-- End carousel navigation controls -->
 
-                <button id="carousel-control-right">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next Image</span>
-                </button>
+                <!-- carousel content -->
+                <div class="slider slide_img_01"></div>
+                <div class="slider slide_img_02"></div>
+                <div class="slider slide_img_03"></div>
+                <div class="slider slide_img_04"></div>
+                <div class="slider slide_img_05"></div>
 
             </div> <!-- End carousel -->
 

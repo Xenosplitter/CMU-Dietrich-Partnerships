@@ -560,68 +560,187 @@
         3.1. Carousel
     ------------------------------------------------------ */
         
-        #image-carousel .carousel-item {
-            display: block;
+        #image-carousel {
+            position : relative;
+            display : block;
+            overflow : hidden;
+            width : 100%;
+            max-width : 100vw;
+            height : 49.5vw;
+            max-height : 100%;
+            margin : 0 auto;
+        }
+
+        .slider {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
             position: absolute;
-
-            min-height: 400px;
-            margin: 0;
-            z-index: 1;
-
-            background-color: #000;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .carousel-inner {
-            min-height: 400px;
+            left: 0;
+            top: 0;
             width: 100%;
+            height: 100%;
+            opacity: 1;
+            z-index: 0;
+
+            
+            transition: right .2s ease;
+            transform: scale(1);
+        }
+          
+        /* Slider images */  
+        .slide_img_01 {
+            background : url('https://picsum.photos/2000/1600/?random') no-repeat center;
+            background-size: cover;
+            left: 0;
+        }
+        
+        .slide_img_02 {
+            background : url('https://picsum.photos/2200/1800/?random') no-repeat center;
+            background-size : cover;
+            left: 100%
+        }
+        
+        .slide_img_03 {
+            background : url('https://picsum.photos/2400/2000/?random') no-repeat center;
+            background-size : cover;
+            left: 200%
+        }
+        
+        .slide_img_04 {
+            background : url('https://picsum.photos/2600/2200/?random') no-repeat center;
+            background-size : cover;
+            left: 300%
+        }
+        
+        .slide_img_05 {
+            background : url('https://picsum.photos/2800/2400/?random') no-repeat center;
+            background-size : cover;
+            left: 400%
+        }
+        
+
+        /* Next and Prev arrow */ 
+        .control {
+            position: absolute;
+            top: 50%;
+            margin-top: -24px;
+            z-index: 55;
+        }
+        
+        .control label {
+            display: none;
+            cursor: pointer;
+            opacity: 0.9;
+
+            width : 48px;
+            height : 48px;
+
+            margin: 0;
+        }
+        
+        .control label:hover {
+            transition : all .2s ease;
+            fill : #000;
+            opacity: 1.0;
+        }
+        
+        .next {
+            right: 1%;
+        }
+        
+        .previous {
+            left: 1%;
         }
 
-        #first-slide {
-            background-image: url(../img/shopping-min.jpg);
-            left: 0%; /* Visible at the start */
+        .next label {
+            background: -1180px 0 no-repeat url(../img/sprites-social.png);
+            background-size: auto 100%;
         }
 
-        #second-slide {
-            background-image: url(../img/photos-min.jpg);
-            left: 100%; /* Hidden off to the right */
+        .previous label {
+            background: -1204px 0 no-repeat url(../img/sprites-social.png);
+            background-size: auto 100%;
         }
+        
 
-        #third-slide {
-            background-image: url(../img/book-min.jpg);
-            left: 200%; /* Hidden off to the right */
+        /* Slider Pagger */ 
+        .slider-pagination {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            margin: auto 0;
+            text-align: center;
+
+            background: rgba(0,0,0,.5);
+
+            z-index: 70;
         }
-
-        #fourth-slide {
-            background-image: url(../img/greece-min.jpg);
-            left: 300%; /* Hidden off to the right */
+        
+        .slider-pagination label {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            margin: 0 2px;
+            border: solid 1px rgba(255,255,255,0.4);
+            cursor: pointer;
         }
+        
 
-        #fifth-slide {
-            background-image: url(../img/closed-min.jpg);
-            left: 400%; /* Hidden off to the right */
+        /* Slider Pagger arrow event */
+        .slide-radio1:checked ~ .next .num2, .slide-radio2:checked ~ .next .num3, .slide-radio3:checked ~ .next .num4, .slide-radio4:checked ~ .next .num5, .slide-radio5:checked ~ .next .num1,
+        .slide-radio5:checked ~ .previous .num4, .slide-radio4:checked ~ .previous .num3, .slide-radio3:checked ~ .previous .num2, .slide-radio2:checked ~ .previous .num1, .slide-radio1:checked ~ .previous .num5 {
+            display: block;
         }
+        
 
-        /* Phone Screens */
+        /* Slider Pagger event */
+        .slide-radio1:checked ~ .slider-pagination .page1, .slide-radio2:checked ~ .slider-pagination .page2, .slide-radio3:checked ~ .slider-pagination .page3, .slide-radio4:checked ~ .slider-pagination .page4, .slide-radio5:checked ~ .slider-pagination .page5 {
+            background: rgba(255,255,255,1)
+        }
+        
+
+        /* Slide effect */
+        .slide-radio1:checked ~ .slider { transform: translateX(0%); }
+        .slide-radio2:checked ~ .slider { transform: translateX(-100%); }
+        .slide-radio3:checked ~ .slider { transform: translateX(-200%); }
+        .slide-radio4:checked ~ .slider { transform: translateX(-300%); }
+        .slide-radio5:checked ~ .slider { transform: translateX(-400%); }
+        
+
+        /*	Slider Mobile	====================================================================================== */
+        
         @media only screen and (max-width: 767px) {
-            .carousel-inner, .carousel-item {
-                height: 400px;
+        
+            #image-carousel {
+                position : relative;
+                width : 100%;
+                height : 400px;
             }
-        }
-
-        /* Tablet Screens */
-        @media only screen and (max-width: 1300px) {
-            .carousel-inner, .carousel-item {
-                height: 49.5vw;
+            
+            .slider > div { padding: 0 2% }
+            
+            .control {
+                position: absolute;
+                top: 60%;
+                margin-top: -24px;
+                z-index: 55;
             }
-        }
 
-        /* Desktop Screens */
-        @media only screen and (min-width: 1700px) {
-            .carousel-inner, .carousel-item {
-                height: 80vh;
+            .slider-pagination {
+                padding: 5px;
+            }
+            
+            .control label {
+                width : 32px;
+                height : 32px;
             }
         }
 
