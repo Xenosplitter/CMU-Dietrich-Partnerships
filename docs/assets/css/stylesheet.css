@@ -20,6 +20,7 @@
     4. Footer
     5. Sidenav
         5.1. Links
+        5.2. Search
 
 ------------------------------------------------------ */
 
@@ -314,7 +315,7 @@
                 top: 30%;
             }
 
-            .roof.invert .search button {
+            .roof.invert .search button:not(#nav-submit) {
                 height: 100%;
                 margin: 0;
             }
@@ -668,23 +669,7 @@
     }
 
     .menu-btn#close-nav {
-        right: 0;
-    }
-
-    .search#nav-search button {
-        background: url(../img/icon-magnify.png) scroll no-repeat 50% 50%;
-        background-color: rgba(0,0,0,.2);
-        background-size: auto;
-        background-size: 50%;
-        height: 100%;
-        padding: 0 14px 0 24px;
-        text-indent: -9999px;
-        width: auto;
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-        border: 0 none;
+        right: 5px;
     }
 
     #sidenav h1 {
@@ -801,3 +786,78 @@
                 padding-right: 70px;
             }
         }
+
+    /* ------------------------------------------------------
+        5.2. Search
+    ------------------------------------------------------ */
+
+    #sidenav form {
+        padding-top: 1em;
+        padding-left: 1.5em;
+        padding-bottom: 0.5em;
+        display: flex;
+        flex-flow: nowrap row;
+        align-items: stretch;
+        align-content: stretch;
+        justify-content: flex-start;
+        line-height: 2em;
+        width: 100%;
+    }
+
+    #sidenav input:not([type="radio"]), select, textarea {
+        border-radius: 0;
+    }
+
+    #sidenav input[placeholder="Search"] {
+        background-color: rgba(255,255,255,.2);
+        border: 0 none;
+        color: #fff;
+        height: 100%;
+        margin: 0;
+        padding: 0 30px 0 8px;
+        width: calc(100% - 38px);
+    }
+
+    #sidenav label.searchSite {
+        display: none;
+        position: absolute;
+        letter-spacing: .025em;
+        left: -105%;
+        text-align: right;
+        top: 30%;
+    }
+
+    #sidenav .search button {
+        height: 100%;
+        margin: 0;
+    }
+
+    #sidenav .search label.searchSite span {
+        font-size: 90%;
+        margin: 1px 0 0 .5em;
+        float: right;
+    }
+
+    /* Hide checkbox until searchbox is clicked within */
+    #sidenav .search label.searchSite, #sidenav .search label:not(.searchSite) span {
+        display: none;
+    }
+
+    #sidenav input[type="checkbox"] {
+        margin: 0;
+        vertical-align: baseline;
+    }
+
+    #nav-submit {
+        display: block;
+        position: relative;
+        right: 2.35em;
+        background: url(../img/icon-magnify.png) scroll no-repeat 50% 50%;
+        background-color: rgba(255,255,255,.2);
+        background-size: auto;
+        background-size: 50%;
+        text-indent: -9999px;
+        border: 0 none;
+
+        height: 2em !important;
+    }
