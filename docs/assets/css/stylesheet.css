@@ -478,6 +478,7 @@
                 border-left: 0;
             }
 
+            /* We only need the bottom border on non-index pages */
             .not-index#other-nav li:not(.active) {
                 border-bottom: 0.5px solid rgba(0,0,0,.2);
             }
