@@ -532,7 +532,7 @@
     }
 
     /* Divide footer from sidenav */
-    .menu-on #final-footer {
+    #final-footer.menu-on {
         border-right: 1px solid rgba(255,255,255,0.15);
     }
 
