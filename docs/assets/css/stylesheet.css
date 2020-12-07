@@ -565,7 +565,6 @@
             position: absolute;
 
             min-height: 400px;
-            overflow: hidden;
             margin: 0;
             z-index: 1;
 
@@ -577,30 +576,32 @@
 
         .carousel-inner {
             min-height: 400px;
+            width: 100%;
         }
 
         #first-slide {
             background-image: url(../img/shopping-min.jpg);
+            left: 0%; /* Visible at the start */
         }
 
         #second-slide {
             background-image: url(../img/photos-min.jpg);
-            left: 100%;
+            left: 100%; /* Hidden off to the right */
         }
 
         #third-slide {
             background-image: url(../img/book-min.jpg);
-            left: 200%;
+            left: 200%; /* Hidden off to the right */
         }
 
         #fourth-slide {
             background-image: url(../img/greece-min.jpg);
-            left: 300%;
+            left: 300%; /* Hidden off to the right */
         }
 
         #fifth-slide {
             background-image: url(../img/closed-min.jpg);
-            left: 400%;
+            left: 400%; /* Hidden off to the right */
         }
 
         /* Phone Screens */
