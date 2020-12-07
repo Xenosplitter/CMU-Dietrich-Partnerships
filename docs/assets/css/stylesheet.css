@@ -444,7 +444,7 @@
                 }
             }
 
-            @media only screen and (max-width: 960px) {
+            @media only screen and (max-width: 991px) {
                 #sitename h1 {
                     font-size: 2.5em;
                 }
@@ -629,53 +629,94 @@
         display: inline-block;
         width: 100%;
 
+        z-index: 100;
     }
 
     #sidenav {
-        display: none;
-
         width: 300px;
         height: 100%;
         background: #333;
-        z-index: 101;
+        z-index: 102;
+    }
+
+    nav#sidenav {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        right: -300px;
+        width: 300px;
+        height: 100%;
+        background-color: #333 !important;
+        overflow: hidden;
+        box-sizing: border-box;
+        opacity: 0;
+        transition: right .2s ease;
     }
 
     #sidenav.menu-on {
-        display: inline-block;
+        display: block;
         position: fixed;
         border-left: 1px solid rgba(0,0,0,.35);
-    }
-
-
-
-
+        right: 0;
+        opacity: 1;
+    }    
 
     /* Handle resizing on default to -300px less */
     #non-sidenav.menu-on {
         width: calc(100% - 300px);
     }
 
+    #sidenav.menu-btn {
+        right: 0;
+    }
+
+    #close-nav.search button {
+        background: url(../img/icon-magnify.png) scroll no-repeat 50% 50%;
+        background-color: rgba(0,0,0,.2);
+        background-size: auto;
+        background-size: 50%;
+        height: 100%;
+        padding: 0 14px 0 24px;
+        text-indent: -9999px;
+        width: auto;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: 0 none;
+    }
+
     /* Handle side nav on small screens to cover, not resize*/
-    @media only screen and (max-width: 960px) {
+    @media only screen and (max-width: 767px) {
+        nav#sidenav {
+            right: -85%;
+            width: 85%;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
         #non-sidenav.menu-on {
             width: 100vw;
             position: fixed;
         }
 
         #sidenav {
-            position: absolute;
-            right: 0;
+            padding-top: 3.5em;
         }
+    }
+
+    @media only screen and (max-width: 1300px) {
     }
 
     /* Handle resizing on large screens to -450px less */
     @media only screen and (min-width: 1700px) {
         #non-sidenav.menu-on {
-            width: calc(100% - 450px);
-            z-index: 101;
+            width: calc(100% - 450px) !important;
+            z-index: 102;
         }
 
         #sidenav {
-            width: 450px;
+            width: 450px !important;
         }
     }
+    
