@@ -637,6 +637,7 @@
         width: 300px;
         height: 100%;
         background: #333;
+        z-index: 101;
     }
 
     #sidenav.menu-on {
@@ -652,7 +653,6 @@
     /* Handle resizing on default to -300px less */
     #non-sidenav.menu-on {
         width: calc(100% - 300px);
-        z-index: 101;
     }
 
     /* Handle side nav on small screens to cover, not resize*/
@@ -660,6 +660,11 @@
         #non-sidenav.menu-on {
             width: 100vw;
             position: fixed;
+        }
+
+        #sidenav {
+            position: absolute;
+            right: 0;
         }
     }
 
