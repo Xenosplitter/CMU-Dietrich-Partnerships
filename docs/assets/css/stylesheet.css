@@ -18,6 +18,7 @@
             2.1.3. Secondary Nav
         2.2. Header text
     3. Main
+        3.1. Carousel
     4. Footer
     5. Sidenav
         5.1. Links
@@ -554,7 +555,74 @@
     .core > * {
         margin: 0;
     }
+
+    /* ------------------------------------------------------
+        3.1. Carousel
+    ------------------------------------------------------ */
         
+        #image-carousel .carousel-item {
+            display: block;
+            position: absolute;
+
+            min-height: 400px;
+            overflow: hidden;
+            margin: 0;
+            z-index: 1;
+
+            background-color: #000;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .carousel-inner {
+            min-height: 400px;
+        }
+
+        #first-slide {
+            background-image: url(../img/shopping-min.jpg);
+        }
+
+        #second-slide {
+            background-image: url(../img/photos-min.jpg);
+            left: 100%;
+        }
+
+        #third-slide {
+            background-image: url(../img/book-min.jpg);
+            left: 200%;
+        }
+
+        #fourth-slide {
+            background-image: url(../img/greece-min.jpg);
+            left: 300%;
+        }
+
+        #fifth-slide {
+            background-image: url(../img/closed-min.jpg);
+            left: 400%;
+        }
+
+        /* Phone Screens */
+        @media only screen and (max-width: 767px) {
+            .carousel-inner, .carousel-item {
+                height: 400px;
+            }
+        }
+
+        /* Tablet Screens */
+        @media only screen and (max-width: 1300px) {
+            .carousel-inner, .carousel-item {
+                height: 49.5vw;
+            }
+        }
+
+        /* Desktop Screens */
+        @media only screen and (min-width: 1700px) {
+            .carousel-inner, .carousel-item {
+                height: 80vh;
+            }
+        }
 
 /* ------------------------------------------------------
     4. Footer
