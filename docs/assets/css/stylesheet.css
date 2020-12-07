@@ -629,6 +629,12 @@
             top: 50%;
             margin-top: -24px;
             z-index: 55;
+
+            background: rgba(255,255,255,.75);
+        }
+
+        .control:hover {
+            background: white;
         }
         
         .control label {
@@ -638,34 +644,30 @@
 
             width : 48px;
             height : 48px;
+            text-indent: -9999px;
+        }
 
-            margin: 0;
+        .control svg {
+            position: absolute;
+            left: 0;
+            top: 15%;
+            width: 100%;
+            height: 70%;
+
+            fill: #858585;
         }
         
-        .control label:hover {
-            transition : all .2s ease;
+        .control svg:hover {
+            transition : all .5s ease;
             fill : #000;
             opacity: 1.0;
         }
         
-        .next {
-            right: 1%;
+        .next {            
+            transform: rotate(180deg);
+            transform-origin: center;
+            right: 0;
         }
-        
-        .previous {
-            left: 1%;
-        }
-
-        .next label {
-            background: -1180px 0 no-repeat url(../img/sprites-social.png);
-            background-size: auto 100%;
-        }
-
-        .previous label {
-            background: -1204px 0 no-repeat url(../img/sprites-social.png);
-            background-size: auto 100%;
-        }
-        
 
         /* Slider Pagger */ 
         .slider-pagination {
@@ -677,19 +679,18 @@
             margin: auto 0;
             text-align: center;
 
-            background: rgba(0,0,0,.5);
+            background: rgba(255,255,255,.75);
 
             z-index: 70;
         }
         
         .slider-pagination label {
-            width: 10px;
-            height: 10px;
+            width: 12.5px;
+            height: 12.5px;
             border-radius: 50%;
             display: inline-block;
-            background: rgba(255,255,255,0.2);
+            background: rgba(0,0,0,0.2);
             margin: 0 2px;
-            border: solid 1px rgba(255,255,255,0.4);
             cursor: pointer;
         }
         
@@ -703,7 +704,7 @@
 
         /* Slider Pagger event */
         .slide-radio1:checked ~ .slider-pagination .page1, .slide-radio2:checked ~ .slider-pagination .page2, .slide-radio3:checked ~ .slider-pagination .page3, .slide-radio4:checked ~ .slider-pagination .page4, .slide-radio5:checked ~ .slider-pagination .page5 {
-            background: rgba(255,255,255,1)
+            background: #333;
         }
         
 
@@ -887,14 +888,14 @@
         position: fixed;
         top: 0;
         z-index: 100;
-        right: -300px;
+        right: -500px;
         width: 300px;
         height: 100%;
         background-color: #333 !important;
         overflow: hidden;
         box-sizing: border-box;
         opacity: 0;
-        transition: right .2s ease;
+        transition: right .3s ease;
     }
 
     .menu-on#sidenav {
