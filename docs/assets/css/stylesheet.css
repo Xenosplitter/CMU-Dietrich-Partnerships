@@ -531,11 +531,7 @@
         }
     }
 
-    /* Divide footer from sidenav */
-    #final-footer.menu-on {
-        border-right: 1px solid rgba(255,255,255,0.15);
-    }
-
+    /* Footer with site links */
     #sub-footer {
         background-color: var(--cmu-gray);
         padding-top: 2em;
@@ -573,7 +569,6 @@
 
     /* Socials */
     /* All socials use the same spritesheet. Select a different image by translating the background image on the x axis */
-
     #my-socials {
         margin: 0;
         padding: 0;
@@ -647,6 +642,7 @@
     #sidenav.menu-on {
         display: inline-block;
         position: fixed;
+        border-left: 1px solid rgba(0,0,0,.35);
     }
 
 
