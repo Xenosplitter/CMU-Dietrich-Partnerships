@@ -185,7 +185,6 @@
 
 
         .h1 + .h2, .h1 + h2, .h2 + h3, h1 + .h2, h1 + h2, h2 + h3 {
-            clear: none;
             letter-spacing: 0;
             margin-top: -.5em;
             text-transform: inherit;
@@ -466,7 +465,7 @@
                 }
             }
 
-            @media only screen and (max-width: 1475px) {
+            @media only screen and (max-width: 1525px) {
                 .menu-on #sub-brand {
                     visibility: hidden;
                 }
@@ -656,6 +655,34 @@
         padding-bottom: 1em;
     }
 
+    blockquote {
+        letter-spacing: 1px;
+    }
+
+    .quote {
+        margin: 0;
+        background: #eee;
+        padding: 1em;
+        border-radius: 1em;
+    }
+
+    .quote figcaption, .quote blockquote {
+        margin: 1em;
+    }
+
+    #fakequote {
+        margin-top: -4em;
+    }
+
+    #fakequote blockquote::before {
+        content: open-quote;
+        font-size: 2em;
+    }
+
+    #fakequote blockquote::after {
+        content: close-quote;
+    }
+
     .align-left {
         text-align: right;
     }
@@ -672,6 +699,10 @@
     blockquote.align-right {
         border-right: 2px solid var(--cmu-dark-gray);
         padding-right: 7.5px;
+    }
+
+    a.cta {
+        border: none;
     }
 
     /* ------------------------------------------------------
@@ -1301,6 +1332,10 @@
     #sidenav .search button {
         height: 100%;
         margin: 0;
+    }
+
+    #sidenav li.active {
+        background-color: rgba(255,255,255,0.25);
     }
 
     #sidenav .search label.searchSite span {
