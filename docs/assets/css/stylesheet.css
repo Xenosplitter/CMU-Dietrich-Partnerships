@@ -571,6 +571,10 @@
             .not-index#other-nav li:not(.active) {
                 border-bottom: 0.5px solid rgba(0,0,0,.2);
             }
+
+            .not-index#other-nav {
+                margin-bottom: 1em;
+            }
             
             #other-nav li a, #other-nav li a:visited {
                 color: rgba(0,0,0,.65);
