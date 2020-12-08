@@ -124,13 +124,9 @@
         
 
         /* To speed up load time, only use Open Sans for screens larger than tablet. */
-        @media only screen and (min-width: 767px) {
+        @media only screen and (min-width: 768px) {
             html, body, button, input, select, textarea { 
             font-family: 'Open Sans', 'Helvetica', sans-serif;
-            }
-
-            h1 {
-                font-size: 2em;
             }
         }
 
@@ -151,11 +147,60 @@
             font-weight: 700;
             line-height: 1.35em;
             word-wrap: normal;
+            line-height: 1.35em;
+            margin: 0;
+            padding: 1em 0;
+            word-wrap: normal;
         }
 
         .h1, h1 {
             font-size: 2.35em;
             font-weight: 300;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .h1 + .h2, .h1 + h2, h1 + .h2, h1 + h2 {
+            margin-top: -1.35em;
+            font-weight: 300;
+        }
+
+        #sitename h1 {
+            padding-top: 0.25em;
+        }
+
+        #sitename h2 {
+            color: inherit;
+            font-style: normal;
+            margin-top: -1.5em;
+            padding-top: 0;
+        }
+
+
+        .h1 + .h2, .h1 + h2, .h2 + h3, h1 + .h2, h1 + h2, h2 + h3 {
+            clear: none;
+            letter-spacing: 0;
+            margin-top: -.5em;
+            text-transform: inherit;
+        }
+
+        .h2, .sidebar .blockquote, .sidebar blockquote, h2 {
+            color: #707070;
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+
+        @media only screen and (max-width: 767px) {
+
+            h1 {
+                font-size: 2em;
+            }
+
+            #sitename h2 {
+                margin-top: 0;
+            }
         }
 
     /* ------------------------------------------------------
@@ -359,6 +404,15 @@
                 border: 0 none;
             }
 
+            #sub-brand {
+                position: absolute;
+                height: 75px;
+                width: 300px;
+                right: 9%;
+                top: 80px;
+                background: 0 0 no-repeat url(../img/logo.png);
+            }
+
             @media only screen and (max-width: 767px) {
                 .roof .menu-btn + form {
                     right: 0;
@@ -398,7 +452,7 @@
                     right: calc(2% + 42px);
                 }
 
-                .menu-btn {
+                #sub-brand, .menu-btn {
                     right: 2%
                 }
             }
@@ -408,7 +462,7 @@
                     right: calc(15% + 42px);
                 }
 
-                .menu-btn {
+                #sub-brand, .menu-btn {
                     right: 15%
                 }
             }
@@ -423,6 +477,10 @@
                 border: 0;
                 padding-top: 0;
                 padding-bottom: 0;
+            }
+
+            #sitename a:hover {
+                color: var(--cmu-red);
             }
             
             #sitename {
