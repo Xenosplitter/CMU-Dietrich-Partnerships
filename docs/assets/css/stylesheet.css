@@ -656,13 +656,9 @@
         padding-bottom: 1em;
     }
 
-    blockquote {
-        letter-spacing: 1px;
-    }
-
     .quote {
         margin: 0;
-        background: #eee;
+        background: var(--cmu-gray);
         padding: 1em;
         border-radius: 1em;
     }
@@ -684,7 +680,15 @@
         content: close-quote;
     }
 
+    blockquote {
+        letter-spacing: 1px;
+    }
+
     .align-left {
+        text-align: right;
+    }
+
+    .align-right {
         text-align: right;
     }
 
@@ -693,17 +697,21 @@
         padding-left: 7.5px;
     }
 
-    .align-right {
-        text-align: right;
-    }
-
     blockquote.align-right {
         border-right: 2px solid var(--cmu-dark-gray);
         padding-right: 7.5px;
     }
 
+    /* Hide link border on LEARN MORE text */
     a.cta {
         border: none;
+    }
+
+    /* Shift quote down when colliding with header text */
+    @media only screen and (max-width: 1150px) {
+        #fakequote {
+            margin-top: 0;
+        }
     }
 
     /* ------------------------------------------------------
@@ -1001,36 +1009,42 @@
         }
             
 
-        /* ------------------------------------------------------
-            3.4. Images
-        ------------------------------------------------------ */
+    /* ------------------------------------------------------
+        3.4. Images
+    ------------------------------------------------------ */
 
+        #work-img {
+            background: 0 0 no-repeat url("../img/work-min.jpg");
+            background-size: cover;
+            
+            width: 100%;
+            height: 20vw;
+
+            margin-bottom: 15px;
+            margin-left: 15px;
+            margin-right: -15px;
+        }
+
+        #work-img + div {
+            padding-left: 30px;
+        }
+
+        @media only screen and (max-width: 767px) {
             #work-img {
-                background: 0 0 no-repeat url("../img/work-min.jpg");
-                background-size: cover;
-                
-                width: 100%;
-                height: 20vw;
-
-                margin-left: 15px;
-                margin-right: -15px;
+                height: 50vw;
+                margin-right: 0;
             }
 
             #work-img + div {
-                padding-left: 30px;
+                padding-left: 15px;
             }
+        }
 
-            @media only screen and (max-width: 767px) {
-                #work-img {
-                    height: 50vw;
-                }
+        @media only screen and (min-width: 768px) and (max-width: 960px) {
+            #work-img {
+                height: 30vw;
             }
-
-            @media only screen and (min-width: 768px) and (max-width: 960px) {
-                #work-img {
-                    height: 30vw;
-                }
-            }
+        }
 
 /* ------------------------------------------------------
     4. Footer
