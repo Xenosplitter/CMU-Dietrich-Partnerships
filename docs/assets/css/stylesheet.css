@@ -20,6 +20,7 @@
     3. Main
         3.1. Carousel
         3.2. Text Blurb
+        3.3. Breadcrumbs
     4. Footer
     5. Sidenav
         5.1. Links
@@ -139,6 +140,10 @@
             position: relative;
             display: inline-block;
             max-width: calc(100% - 6px - .5em);
+        }
+
+        p {
+            line-height: 1.75em;
         }
 
         .h1, .h2, h1, h2, h3, h4, h5, h6 {
@@ -413,6 +418,10 @@
                 background: 0 0 no-repeat url(../img/logo.png);
             }
 
+            .menu-on#sub-brand {
+                right: calc(9% + 300px);
+            }
+
             @media only screen and (max-width: 767px) {
                 .roof .menu-btn + form {
                     right: 0;
@@ -453,7 +462,19 @@
                 }
 
                 #sub-brand, .menu-btn {
-                    right: 2%
+                    right: 2%;
+                }
+            }
+
+            @media only screen and (max-width: 1475px) {
+                .menu-on #sub-brand {
+                    visibility: hidden;
+                }
+            }
+
+            @media only screen and (min-width: 1301px) {
+                .menu-on #sub-brand {
+                    right: calc(9% + 270px);
                 }
             }
 
@@ -463,7 +484,11 @@
                 }
 
                 #sub-brand, .menu-btn {
-                    right: 15%
+                    right: 15%;
+                }
+
+                .menu-on #sub-brand {
+                    right: calc(15% + 400px);
                 }
             }
 
@@ -617,6 +642,32 @@
 
     .core > * {
         margin: 0;
+    }
+
+    .core h1, .core h2, .core h3, .core h4, .core h5, .core h6 {
+        padding: 0 15px 10px;
+    }
+
+    .core div {
+        padding-bottom: 1em;
+    }
+
+    .align-left {
+        text-align: right;
+    }
+
+    blockquote.align-left {
+        border-left: 2px solid var(--cmu-dark-gray);
+        padding-left: 7.5px;
+    }
+
+    .align-right {
+        text-align: right;
+    }
+
+    blockquote.align-right {
+        border-right: 2px solid var(--cmu-dark-gray);
+        padding-right: 7.5px;
     }
 
     /* ------------------------------------------------------
@@ -885,6 +936,33 @@
                     right: 15%;
                 }
             }
+            
+
+    /* ------------------------------------------------------
+        3.3. Breadcrumbs
+    ------------------------------------------------------ */
+
+        nav[aria-label = "breadcrumb"] {
+            margin-top: -4em;
+        }
+
+        ol.breadcrumb{
+            background: none !important;
+        }
+
+        .breadcrumb-item, .breadcrumb-item:first-child {
+            padding: 8px 8px 8px 0;
+        }
+
+        @media only screen and (max-width: 767px) {
+            nav[aria-label = "breadcrumb"] {
+                margin-top: -2em;
+            }
+
+            .breadcrumb-item, .breadcrumb-item:first-child {
+                padding-right: 4px;
+            }
+        }
 
 /* ------------------------------------------------------
     4. Footer
@@ -1066,17 +1144,22 @@
     }
 
     /* Handle side nav on small screens to cover, not resize*/
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 676px) {
         nav#sidenav {
             right: -85%;
             width: 85%;
         }
     }
 
-    @media only screen and (max-width: 991px) {
+    @media only screen and (min-width: 676px) and (max-width: 991px) {
         .menu-on#non-sidenav {
             width: 100vw;
             position: fixed;
+        }
+
+        nav#sidenav {
+            right: -50%;
+            width: 50%;
         }
     }
 
