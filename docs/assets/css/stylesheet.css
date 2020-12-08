@@ -1011,6 +1011,13 @@
                 
                 width: 100%;
                 height: 20vw;
+
+                margin-left: 15px;
+                margin-right: -15px;
+            }
+
+            #work-img + div {
+                padding-left: 30px;
             }
 
             @media only screen and (max-width: 767px) {
