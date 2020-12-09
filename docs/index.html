@@ -30,9 +30,10 @@
             <header>
                 <!-- Site Roof -->
                 <!-- This is called the Roof in official CMU websites. I kept the convention for posterity-->
-                <div class="navbar roof">
+                <div class="navbar navbar-dark bg-dark roof">
+
                     <!-- CMU watermark -->
-                    <div class="my-brand">
+                    <div class="nav-brand">
                         <a class="wordmark" href="https://www.cmu.edu">Carnegie Mellon University</a>
                     </div>
 
@@ -45,7 +46,7 @@
                     </a>
                     
                     <!-- Search -->
-                    <form class="search" id="cmu-search" action="https://web-search.andrew.cmu.edu/search">
+                    <form class="form-inline search" id="cmu-search" action="https://web-search.andrew.cmu.edu/search">
                         <!-- Pulled from https://www.cmu.edu/dietrich/ search html -->
                         <!-- As this was pulled without context or comments, I can only guess that this is for internal search
                              parameters. If this would change wrt a user's browser, this implementation would not work as intended. -->
@@ -63,10 +64,6 @@
                             <input name="q" placeholder="Search" title="Type keywords into this box, then press enter.">
                         </label>
                         <button title="Submit" type="submit">Search</button>
-                        <label class="searchSite">
-                            <span>Search this site only</span>
-                            <input checked="false" name="site" type="checkbox" value="dietrich-2">
-                        </label>
                         <!-- This works as intended on a Firefox browser, version 83.0(64-bit), as of 2020.12.8 -->
                         <!-- Other browser compatability is unknown -->
                     </form>
