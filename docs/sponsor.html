@@ -28,20 +28,24 @@
 
             <header>
                 <!-- Site Roof -->
-                <div class="navbar roof">
-                    <div class="my-brand">
+                <!-- This is called the Roof in official CMU websites. I kept the convention for posterity-->
+                <nav class="navbar navbar-dark bg-dark roof">
+
+                    <!-- CMU watermark -->
+                    <div class="nav-brand">
                         <a class="wordmark" href="https://www.cmu.edu">Carnegie Mellon University</a>
                     </div>
 
                     <!-- Sidenav toggle button -->
-                    <a class="menu-btn" id="sidenav-toggle" aria-hidden="true" href="#search">
+                    <!-- This is controlled by custom javascript code -->
+                    <a class="menu-btn" id="sidenav-toggle" aria-hidden="true" href="#search" data-toggle="tooltip" data-placement="bottom" title="Open navigation menu to the side.">
                         <b>—</b>
                         <b>—</b>
                         <b>—</b>
                     </a>
                     
                     <!-- Search -->
-                    <form class="search" id="cmu-search" action="https://web-search.andrew.cmu.edu/search">
+                    <form class="form-inline search" id="cmu-search" action="https://web-search.andrew.cmu.edu/search">
                         <!-- Pulled from https://www.cmu.edu/dietrich/ search html -->
                         <!-- As this was pulled without context or comments, I can only guess that this is for internal search
                              parameters. If this would change wrt a user's browser, this implementation would not work as intended. -->
@@ -56,15 +60,13 @@
                         <input name="proxystylesheet" type="hidden" value="default_frontend">
                         <label>
                             <span>Search</span>
-                            <input name="q" placeholder="Search" title="Type keywords into this box, then press enter.">
+                            <input name="q" placeholder="Search" data-toggle="tooltip" data-placement="bottom" title="Type keywords into this box, then press enter.">
                         </label>
-                        <button title="Submit" type="submit">Search</button>
-                        <label class="searchSite">
-                            <span>Search this site only</span>
-                            <input checked="false" name="site" type="checkbox" value="dietrich-2">
-                        </label>
+                        <button data-toggle="tooltip" data-placement="bottom" title="Submit" type="submit">Search</button>
+                        <!-- This works as intended on a Firefox browser, version 83.0(64-bit), as of 2020.12.8 -->
+                        <!-- Other browser compatability is unknown -->
                     </form>
-                </div> <!-- End Roof -->
+                </nav> <!-- End Roof -->
 
                 <div id="sitename">
                     <h1>
@@ -202,7 +204,7 @@
  
         <!-- When nav button is toggled, add menu-on to class to show sidenav, otherwise keep hidden -->
         <nav class="" id="sidenav">
-            <a aria-haspopup="true" class="menu-btn" id="close-nav" aria-hidden="true" href="#main">✕</a>
+            <a aria-haspopup="true" class="menu-btn" id="close-nav" aria-hidden="true" href="#main" data-toggle="tooltip" data-placement="bottom" title="Open navigation menu to the side.">✕</a>
 
              <!-- Search -->
              <form class="search d-lg-none" id="nav-search" action="https://web-search.andrew.cmu.edu/search">
@@ -220,13 +222,9 @@
                 <input name="proxystylesheet" type="hidden" value="default_frontend">
                 <label>
                     <span>Search</span>
-                    <input name="q" placeholder="Search" title="Type keywords into this box, then press enter.">
+                    <input name="q" placeholder="Search"data-toggle="tooltip" data-placement="bottom" data-toggle="tooltip" data-placement="bottom" title="Type keywords into this box, then press enter.">
                 </label>
-                <button id="nav-submit" title="Submit" type="submit">Search</button>
-                <label class="searchSite">
-                    <span>Search this site only</span>
-                    <input checked="false" name="site" type="checkbox" value="dietrich-2">
-                </label>
+                <button id="nav-submit" data-toggle="tooltip" data-placement="bottom" title="Submit" type="submit">Search</button>
             </form>
 
             <h1><a href="index.html">Dietrich External Partnerships</a></h1>
@@ -285,6 +283,13 @@
 
         <!-- Homebrew scripts -->
         <script src="./assets/js/sidenav.js"></script>
+
+        <!-- Activate tooltips (disabled by default, so they need to be enbled manually -->
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
     </body>
 
 </html>
