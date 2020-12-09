@@ -4,7 +4,7 @@ Mockup of a potential landing page for [Carnegie Mellon University](https://www.
 
 This was created as a term project for Dietrich College's Information Sciences course on Mobile Web Design and Development, course number 67-240, in the Fall 2020 term.
 
-The current progress of the project leaves us with a template page with a working header and footer. Content can be added to the page in the <main/> element, but is currently occupied by placeholder text. Issues that persist include the implementation of the side nav and the responsiveness of the <main/> contents. Once resolved, pages with real content can be created.
+The current progress of the project leaves us with a template page with a working header and footer. Content can be added to the page in the \<main\/\> element, but is currently occupied by placeholder text. Issues that persist include the implementation of the side nav and the responsiveness of the \<main\/\> contents. Once resolved, pages with real content can be created.
 
 Items that need implementation include:
 * Transitions
