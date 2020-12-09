@@ -38,7 +38,7 @@
 
                     <!-- Sidenav toggle button -->
                     <!-- This is controlled by custom javascript code -->
-                    <a class="menu-btn" id="sidenav-toggle" aria-hidden="true" href="#search">
+                    <a class="menu-btn" id="sidenav-toggle" aria-hidden="true" href="#search" data-toggle="tooltip" data-placement="bottom" title="Open navigation menu to the side.">
                         <b>—</b>
                         <b>—</b>
                         <b>—</b>
@@ -60,9 +60,9 @@
                         <input name="proxystylesheet" type="hidden" value="default_frontend">
                         <label>
                             <span>Search</span>
-                            <input name="q" placeholder="Search" title="Type keywords into this box, then press enter.">
+                            <input name="q" placeholder="Search" data-toggle="tooltip" data-placement="bottom" title="Type keywords into this box, then press enter.">
                         </label>
-                        <button title="Submit" type="submit">Search</button>
+                        <button data-toggle="tooltip" data-placement="bottom" title="Submit" type="submit">Search</button>
                         <!-- This works as intended on a Firefox browser, version 83.0(64-bit), as of 2020.12.8 -->
                         <!-- Other browser compatability is unknown -->
                     </form>
@@ -203,7 +203,7 @@
  
         <!-- When nav button is toggled, add menu-on to class to show sidenav, otherwise keep hidden -->
         <nav class="" id="sidenav">
-            <a aria-haspopup="true" class="menu-btn" id="close-nav" aria-hidden="true" href="#main">✕</a>
+            <a aria-haspopup="true" class="menu-btn" id="close-nav" aria-hidden="true" href="#main" data-toggle="tooltip" data-placement="bottom" title="Open navigation menu to the side.">✕</a>
 
              <!-- Search -->
              <form class="search d-lg-none" id="nav-search" action="https://web-search.andrew.cmu.edu/search">
@@ -221,13 +221,9 @@
                 <input name="proxystylesheet" type="hidden" value="default_frontend">
                 <label>
                     <span>Search</span>
-                    <input name="q" placeholder="Search" title="Type keywords into this box, then press enter.">
+                    <input name="q" placeholder="Search"data-toggle="tooltip" data-placement="bottom" data-toggle="tooltip" data-placement="bottom" title="Type keywords into this box, then press enter.">
                 </label>
-                <button id="nav-submit" title="Submit" type="submit">Search</button>
-                <label class="searchSite">
-                    <span>Search this site only</span>
-                    <input checked="false" name="site" type="checkbox" value="dietrich-2">
-                </label>
+                <button id="nav-submit" data-toggle="tooltip" data-placement="bottom" title="Submit" type="submit">Search</button>
             </form>
 
             <h1><a href="index.html">Dietrich External Partnerships</a></h1>
