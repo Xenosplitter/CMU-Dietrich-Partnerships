@@ -24,16 +24,20 @@
 
     <body>
         <!-- When nav button is toggled, add menu-on to class to show sidenav, otherwise keep hidden -->
+        <!-- The menu-on class tells the content to shrink to make room for the new sidenav -->
         <div class="" id="non-sidenav">
 
             <header>
                 <!-- Site Roof -->
+                <!-- This is called the Roof in official CMU websites. I kept the convention for posterity-->
                 <div class="navbar roof">
+                    <!-- CMU watermark -->
                     <div class="my-brand">
                         <a class="wordmark" href="https://www.cmu.edu">Carnegie Mellon University</a>
                     </div>
 
                     <!-- Sidenav toggle button -->
+                    <!-- This is controlled by custom javascript code -->
                     <a class="menu-btn" id="sidenav-toggle" aria-hidden="true" href="#search">
                         <b>—</b>
                         <b>—</b>
@@ -63,6 +67,8 @@
                             <span>Search this site only</span>
                             <input checked="false" name="site" type="checkbox" value="dietrich-2">
                         </label>
+                        <!-- This works as intended on a Firefox browser, version 83.0(64-bit), as of 2020.12.8 -->
+                        <!-- Other browser compatability is unknown -->
                     </form>
                 </div> <!-- End Roof -->
 
@@ -74,10 +80,12 @@
                         <a href="https://www.cmu.edu/dietrich">Dietrich College of Humanities and Social Sciences</a>
                     </h2>
 
+                    <!-- Dept. branding only needs to show on bigger screens -->
                     <a href="index.html" id="sub-brand" class="d-none d-lg-block"></a>
 
                 </div> <!-- End Sitename -->
 
+                <!-- o-nav is a secondary navbar. It falls below the site roof -->
                 <div id="other-nav" class="d-none d-md-block">
                     <ul>
                         <li>
@@ -103,8 +111,8 @@
 
             </header>
 
-            <!-- Bootstrap carousel was not giving me the desired results, so I used a slider-->
-            <!-- Code for carousel from https://www.cssscript.com/css-flexbox-image-carousel/-->
+            <!-- Bootstrap carousel was not giving me the desired results, so I used another solution -->
+            <!-- Code for carousel based on https://www.cssscript.com/css-flexbox-image-carousel/-->
             <div id="image-carousel"> 
                 <!-- indicators -->
                 <input id="slider1" type="radio" name="slider" class="slide-radio1" checked="">
@@ -183,28 +191,34 @@
 
             </div> <!-- End carousel -->
 
+            <!-- main uses bootstrap for column layout responsiveness -->
             <!-- Page Content -->
             <main class="core container">
-                
 
                 <div class="row">
+                    <!-- h# always full width on page -->
                     <h1 class="col-12">About Our External Partnership Program</h1>
                     <div class="col-xs-12 col-md-8">
                         <p>Carnegie Mellon University’s Dietrich College of Humanities and Social Sciences offers many resources to both our students and our local communities. With a team dedicated to assisting you, those that want to get in contact with Dietrich College students and faculty can do so with ease.</p>
                         <a href="about.html" class="cta">LEARN MORE</a>
                     </div> <!-- End col -->
 
+
+                    <!-- Quote stays off to the right of the paragraph on md+ screens -->
                     <div class="wrapper col-xs-12 col-md-4">
                         <figure id="fakequote" class="quote">
                             <blockquote class="align-right" cite="#">We at Business Incorporated enjoyed our time working with Dietrich College students over this past year. I don't know what we would have done if we were unable to find the extra help.</blockquote>
                             <figcaption>&mdash; Businessperson, <cite>fakecontent</cite></figcaption>
                         </figure>
-                    </div>
+                    </div> <!-- End col -->
 
                 </div> <!-- End row -->
 
                 <div class="row">
+                    <!-- h# always full width on page -->
                     <h2 class="col-12">Partnership Success Stories</h2>
+
+                    <!-- Keep image to the side of the text on md+ screens -->
                     <div id="work-img" class="col-xs-12 col-md-4"></div>
                     <div class="col-xs-12 col-md-8">
                         <p>It is through the combined effort of our partners are we able to better the world around us. Over the years, Dietrich College has worked with many different groups and organizations. By having our students build relations with people outside of the school, we offer a place to prepare them for life in a future career.</p>
@@ -212,10 +226,11 @@
                         <a href="articles.html" class="cta">LEARN MORE</a>
                     </div> <!-- End col-->
                 </div> <!-- End row -->
+
             </main>
 
 
-
+            <!-- footer uses bootstrap for column layout responsiveness -->
             <footer class="">
                 <!-- Important Site Links -->
                 <nav class="foot row" id="sub-footer">
@@ -266,7 +281,9 @@
                 </div> <!-- End row -->
             </footer>
         </div> <!-- End content -->
- 
+
+
+        <!-- Sidenav does not use bootstrap -->
         <!-- When nav button is toggled, add menu-on to class to show sidenav, otherwise keep hidden -->
         <nav class="" id="sidenav">
             <a aria-haspopup="true" class="menu-btn" id="close-nav" aria-hidden="true" href="#main">✕</a>
